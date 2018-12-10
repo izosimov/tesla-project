@@ -1,0 +1,14 @@
+{
+    "rules": {
+        "color-no-invalid-hex": true,
+        "comment-no-empty": true,
+        "no-extra-semicolons": true,
+        "no-invalid-double-slash-comments": true,
+        "no-duplicate-selectors": true,
+        "string-no-newline": true,
+        "property-no-unknown": true,
+        "font-family-no-duplicate-names": true,
+        "block-no-empty": true,
+        "function-comma-newline-before": "never-multi-line"
+    }
+}

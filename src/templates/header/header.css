@@ -1,0 +1,93 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 48px 0 48px;
+}
+
+/* Разделы меню */
+.header__item {
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: black;
+    position: relative;
+    transition: .3s;
+}
+.item_active,
+.header__item:hover {
+    color: var(--tesla-red);
+    transition: .3s;
+}
+
+.header__item:hover::after,
+.item_active::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    border-bottom: 2px solid var(--tesla-red);
+    border-top: 2px solid rgba(0, 0, 0, 0);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: default;
+    transition: .3s;
+}
+
+/* Основное меню с выбором меделей Tesla */
+
+.header__menu {
+    width: 50%;
+    max-width: 500px;
+    min-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* Блок для входа в личный кабинет и магазин */
+
+.header__shop {
+    min-width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+/* Кнопка меню - гамбургер */
+
+.burger {
+    position: absolute;
+    right: 48px;
+    top: 3px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.red-line {
+    width: 24px;
+    border-bottom: 2px solid var(--tesla-red);
+    border-top: 2px solid rgba(0, 0, 0, 0);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    &:not(:last-child) {
+        margin-bottom: 2px;
+    }
+}
+
+@media (max-width: 960px) {
+    .header {
+        margin: 24px 21px 0 21px;
+    }
+
+    .header__menu,
+    .header__shop {
+        display: none;
+    }
+
+    .burger {
+        right: 21px;
+    }
+}

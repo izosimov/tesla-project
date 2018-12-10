@@ -1,0 +1,199 @@
+:root {
+  --tesla-red: #e51937;
+}
+
+body {
+    font-family: Montserrat;
+    max-width: 1280px;
+    min-width: 320px;
+    margin: auto;
+    position: relative;
+}
+
+/* Шрифты, используемые на странице */
+.standart-text {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.comfort-model__topic > .standart-text,
+.safety-model__topic > .standart-text {
+    margin-bottom: 49px;
+}
+
+.topic-heading {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.little-bold-text {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.big-bold-text {
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.small-discription-text {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.white-text {
+    color: white;
+}
+
+.black-text {
+    color: black;
+}
+
+.secondary-text {
+    font-size: 10px;
+    opacity: .5;
+}
+
+.great-bold-text {
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.great-little-bold-text {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/* Блок призыва к действию - кнопки "узнать больше", "заказать" */
+
+
+.call-to-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &__action-btn {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: 10px 0;
+        transition: .5s;
+    }
+
+
+}
+
+.action-btn_test-drive {
+    width: 96px;
+    position: relative;
+    margin-right: 40px;
+    padding-left: 25px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: 0;
+        top: calc(50% - 11px);
+        background-image: inline('../images/steering-wheel.svg');
+        background-repeat: no-repeat;
+        background-size: 22px;
+        transition: .5s;
+    }
+
+    &:hover {
+        color: var(--tesla-red);
+        transition: .5s;
+        &::before {
+            background-image: inline('../images/steering-wheel-red.svg');
+            transition: .5s;
+        }
+    }
+}
+
+.action-btn_order {
+    width: 160px;
+    color: var(--tesla-red);
+    border: 1px solid var(--tesla-red);
+    transition: .5s;
+
+    &:hover {
+        color: white;
+        background-color: var(--tesla-red);
+        transition: .5s;
+    }
+}
+
+.action-btn_more-info {
+    position: relative;
+    margin-right: 20px;
+    padding-left: 30px;
+
+    &:hover::before {
+        background-image: inline('../images/active-ellipse.svg');
+        transition: .5s;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: 0;
+        top: calc(50% - 11px);
+        background-image: inline('../images/info.svg');
+        background-repeat: no-repeat;
+        background-size: 22px;
+        transition: .5s;
+    }
+}
+
+.action-btn_new-order {
+    width: 160px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    transition: .5s;
+
+    &:hover {
+        background-color: white;
+        color: var(--tesla-red);
+        transition: .5s;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Шрифты */
+
+    .big-bold-text {
+        font-size: 27px;
+    }
+
+    .little-bold-text {
+        font-size: 15px;
+    }
+
+    .comfort-model__topic > .standart-text,
+    .safety-model__topic > .standart-text {
+        margin-bottom: 34px;
+    }
+
+    /* Кнопки */
+
+    .action-btn_order {
+        width: 140px;
+    }
+
+    .action-btn_test-drive {
+        margin-right: 10px;
+    }
+
+    .safety-model__topic > .call-to-action,
+    .comfort-model__topic > .call-to-action {
+        display: none;
+    }
+}

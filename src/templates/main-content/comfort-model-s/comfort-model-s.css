@@ -1,0 +1,104 @@
+.comfort-model {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inline('../images/tesla-bg.png');
+        background-repeat: no-repeat;
+        background-size: 84%;
+        background-position: -90% bottom;
+        z-index: -1;
+    }
+
+    &__heading {
+        font-weight: 600;
+        font-size: 70px;
+        color: var(--tesla-red);
+        padding: 62px 0 0 80px;
+    }
+
+    &__topic {
+        width: 440px;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        background-color: var(--tesla-red);
+        padding: 51px 52px 63px 52px;
+        overflow-x: auto;
+    }
+
+    &__feature-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 171px;
+        & > .feature:not(:last-of-type) {
+            margin-bottom: 35px;
+        }
+    }
+    &__display {
+        background-image: inline('../images/phone.svg');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 30px;
+        padding-left: 50px;
+    }
+    &__wifi {
+        background-image: inline('../images/wifi.svg');
+        background-repeat: no-repeat;
+        background-size: 40px;
+        background-position: left center;
+        padding-left: 50px;
+    }
+    &__baggage-scope {
+        background-image: inline('../images/fuel.svg');
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: left center;
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 960px) {
+    .comfort-model {
+        flex-direction: column;
+        &__heading {
+            display: none;
+        }
+        &__background {
+            position: static;
+            width: auto;
+            min-height: 300px;
+            background-size: cover;
+            background-position-x: 65%;
+            background-position-y: 11%;
+        }
+        &__topic {
+            width: 100%;
+            padding: 51px 52px 63px 52px;
+        }
+        &__feature-wrapper {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .comfort-model__background {
+        height: 40vh;
+    }
+    .comfort-model__topic {
+        padding: 18px 29px 34px 29px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comfort-model__feature-wrapper {
+        display: none;
+    }
+}

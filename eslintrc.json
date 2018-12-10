@@ -1,0 +1,21 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "no-var": "error",
+        "semi": 2,
+        "semi-spacing": "error",
+        "func-call-spacing": ["error", "never"],
+        "no-alert": "error",
+        "complexity": ["error", 2],
+        "init-declarations": ["error", "always"],
+        "no-lone-blocks": "error",
+        "no-warning-comments": "error",
+        "no-labels": "error"
+    }
+}
