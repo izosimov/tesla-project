@@ -4,6 +4,8 @@
 
 * Сборка - Gulp;
 
+Ссылка на проект https://www.izosimov.github.io/tesla-project
+
 
 ## 1. Global dependencies
 
